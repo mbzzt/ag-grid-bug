@@ -1,11 +1,27 @@
 # Ag-grid bug
 
 Created this repo for providing a reproducible environment to Ag-grid team.
-Issue reported here: https://github.com/ag-grid/ag-grid/issues/6853.
+Issue reported here: [https://github.com/ag-grid/ag-grid/issues/6853](https://github.com/ag-grid/ag-grid/issues/7803).
 
 ## Error message I'm seeing when running the app in local or building the app
 
-![Screenshot 2023-07-11 at 15 28 48](https://github.com/mbzzt/ag-grid-bug/assets/1798967/687a6187-85e8-4dbf-9a3e-c68348659fef)
+```
+Module not found: Error: Can't resolve 'react-dom/server' in '/[REDACTED]/ag-grid-bug/node_modules/ag-grid-react/dist/package'
+Did you mean 'server.browser.js'?
+BREAKING CHANGE: The request 'react-dom/server' failed to resolve only because it was resolved as fully specified
+(probably because the origin is strict EcmaScript Module, e. g. a module with javascript mimetype, a '*.mjs' file, or a '*.js' file where the package.json contains '"type": "module"').
+The extension in the request is mandatory for it to be fully specified.
+Add the extension to the request.
+ERROR in ./node_modules/ag-grid-react/dist/package/index.esm.mjs 73:0-56
+Module not found: Error: Can't resolve 'react-dom/server' in '/[REDACTED]/ag-grid-bug/node_modules/ag-grid-react/dist/package'
+Did you mean 'server.browser.js'?
+BREAKING CHANGE: The request 'react-dom/server' failed to resolve only because it was resolved as fully specified
+(probably because the origin is strict EcmaScript Module, e. g. a module with javascript mimetype, a '*.mjs' file, or a '*.js' file where the package.json contains '"type": "module"').
+The extension in the request is mandatory for it to be fully specified.
+Add the extension to the request.
+
+webpack compiled with 1 error
+```
 
 
 ## Available Scripts
